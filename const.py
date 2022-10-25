@@ -74,6 +74,33 @@ class constants:
     ATTR_NAME_OF_SHIELD_TECH = 'ShieldingTechnology'
     ATTR_NAME_OF_ARMOUR_TECH = 'ArmourTechnology'
 
+    prerequisitesDict = {
+        SHIPYARD : 
+        {'constructable' : 
+            {'buildingID': ROBOT_FACTORY, 'buildingLevel': 2},
+        'researchable' : 
+            {'researchID' : -1, 'researchLevel' : -1}
+        },
+        ROBOT_FACTORY : 
+        {'constructable' : 
+            {'buildingID': -1, 'buildingLevel': -1},
+        'researchable' : 
+            {'researchID' : -1, 'researchLevel' : -1}
+        },
+        COMBUSTION_DRIVE : 
+        {'constructable' : 
+            {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
+        'researchable' : 
+            {'researchID' : ENERGY_TECH, 'researchLevel' : 1}
+        },
+        ENERGY_TECH : 
+        {'constructable' : 
+            {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
+        'researchable' : 
+            {'researchID' : -1, 'researchLevel' : -1}
+        }
+    }
+
     def convertOgameIDToAttrName(ogameID):
         if(ogameID == 1):
             return constants.ATTR_NAME_OF_METAL_MINE
@@ -94,9 +121,23 @@ class constants:
         if(ogameID == 24):
             return constants.ATTR_NAME_OF_DEU_STORAGE
 
+    def getPrerequisiteOf(ogameID):
+        constructibleId = -1
+        constructibleLevel = -1
+        researchId = -1
+        researchLevel = -1
+
+
+        return {'constructible' : 
+                    {'id' : constructibleId, 'level': constructibleLevel}, 
+                'research' : 
+                    {'id' : researchId, 'level': researchLevel}}
+
     def getResourceSumInUnitPrice(priceJson):
         sum = 0
         sum += 1 * priceJson['Metal']
         sum += 2 * priceJson['Crystal']
         sum += 3 * priceJson['Deuterium']
         return sum
+
+print(constants.getPrerequisiteOf(2))
