@@ -87,6 +87,12 @@ class constants:
         'researchable' : 
             {'researchID' : -1, 'researchLevel' : -1}
         },
+        RESEARCH_LAB : 
+        {'constructable' : 
+            {'buildingID': -1, 'buildingLevel': -1},
+        'researchable' : 
+            {'researchID' : -1, 'researchLevel' : -1}
+        },
         COMBUSTION_DRIVE : 
         {'constructable' : 
             {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
