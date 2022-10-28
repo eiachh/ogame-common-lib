@@ -87,45 +87,45 @@ class constants:
     prerequisitesDict = {
         SHIPYARD : 
         {'constructable' : 
-            {'buildingID': ROBOT_FACTORY, 'buildingLevel': 2},
+            [{'buildingID': ROBOT_FACTORY, 'buildingLevel': 2}],
         'researchable' : 
-            {'researchID' : -1, 'researchLevel' : -1}
+            [{'researchID' : -1, 'researchLevel' : -1}]
         },
         ROBOT_FACTORY : 
         {'constructable' : 
-            {'buildingID': -1, 'buildingLevel': -1},
+            [{'buildingID': -1, 'buildingLevel': -1}],
         'researchable' : 
-            {'researchID' : -1, 'researchLevel' : -1}
+            [{'researchID' : -1, 'researchLevel' : -1}]
         },
         RESEARCH_LAB : 
         {'constructable' : 
-            {'buildingID': -1, 'buildingLevel': -1},
+            [{'buildingID': -1, 'buildingLevel': -1}],
         'researchable' : 
-            {'researchID' : -1, 'researchLevel' : -1}
+            [{'researchID' : -1, 'researchLevel' : -1}]
         },
         COMBUSTION_DRIVE : 
         {'constructable' : 
-            {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 1}],
         'researchable' : 
-            {'researchID' : ENERGY_TECH, 'researchLevel' : 1}
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 1}]
         },
         ENERGY_TECH : 
         {'constructable' : 
-            {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 1}],
         'researchable' : 
-            {'researchID' : -1, 'researchLevel' : -1}
+            [{'researchID' : -1, 'researchLevel' : -1}]
         },
         SMALL_CARGO : 
         {'constructable' : 
-            {'buildingID': SHIPYARD, 'buildingLevel': 2},
+            [{'buildingID': SHIPYARD, 'buildingLevel': 2}],
         'researchable' : 
-            {'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 2}
+            [{'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 2}]
         },
         LIGHT_FIGHTER : 
         {'constructable' : 
-            {'buildingID': SHIPYARD, 'buildingLevel': 1},
+            [{'buildingID': SHIPYARD, 'buildingLevel': 1}],
         'researchable' : 
-            {'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 1}
+            [{'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 1}]
         }
     }
 
