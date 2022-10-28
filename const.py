@@ -40,6 +40,8 @@ class constants:
     #Ships
     LIGHT_FIGHTER = 204
 
+    SMALL_CARGO = 202
+
     #Resource buildings
     ATTR_NAME_OF_METAL_MINE = 'MetalMine'
     ATTR_NAME_OF_CRYSTAL_MINE = 'CrystalMine'
@@ -80,6 +82,8 @@ class constants:
     #Ships
     ATTR_NAME_OF_LIGHT_FIGHTER = 'LightFighter'
 
+    ATTR_NAME_OF_SMALL_CARGO = 'SmallCargo'
+
     prerequisitesDict = {
         SHIPYARD : 
         {'constructable' : 
@@ -110,6 +114,18 @@ class constants:
             {'buildingID': RESEARCH_LAB, 'buildingLevel': 1},
         'researchable' : 
             {'researchID' : -1, 'researchLevel' : -1}
+        },
+        SMALL_CARGO : 
+        {'constructable' : 
+            {'buildingID': SHIPYARD, 'buildingLevel': 2},
+        'researchable' : 
+            {'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 2}
+        },
+        LIGHT_FIGHTER : 
+        {'constructable' : 
+            {'buildingID': SHIPYARD, 'buildingLevel': 1},
+        'researchable' : 
+            {'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 1}
         }
     }
 
