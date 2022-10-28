@@ -37,6 +37,9 @@ class constants:
     SHIELD_TECH = 110
     ARMOUR_TECH = 111
 
+    #Ships
+    LIGHT_FIGHTER = 204
+
     #Resource buildings
     ATTR_NAME_OF_METAL_MINE = 'MetalMine'
     ATTR_NAME_OF_CRYSTAL_MINE = 'CrystalMine'
@@ -73,6 +76,9 @@ class constants:
     ATTR_NAME_OF_WEAPON_TECH = 'WeaponsTechnology'
     ATTR_NAME_OF_SHIELD_TECH = 'ShieldingTechnology'
     ATTR_NAME_OF_ARMOUR_TECH = 'ArmourTechnology'
+
+    #Ships
+    ATTR_NAME_OF_LIGHT_FIGHTER = 'LightFighter'
 
     prerequisitesDict = {
         SHIPYARD : 
