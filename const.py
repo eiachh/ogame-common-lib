@@ -120,6 +120,55 @@ class constants:
             return constants.ATTR_NAME_OF_CRYSTAL_STORAGE
         if(ogameID == 24):
             return constants.ATTR_NAME_OF_DEU_STORAGE
+        if(ogameID == 14):
+            return constants.ATTR_NAME_OF_ROBOT_FACTORY
+        if(ogameID == 21):
+            return constants.ATTR_NAME_OF_SHIPYARD
+        if(ogameID == 31):
+            return constants.ATTR_NAME_OF_RESEARCH_LAB
+        if(ogameID == 15):
+            return constants.ATTR_NAME_OF_NANITE_FACTORY
+        if(ogameID == 33):
+            return constants.ATTR_NAME_OF_TERRAFORMER
+        if(ogameID == 44):
+            return constants.ATTR_NAME_OF_MISSILE_SILO
+        if(ogameID == 113):
+            return constants.ATTR_NAME_OF_ENERGY_TECH
+        if(ogameID == 120):
+            return constants.ATTR_NAME_OF_LASER_TECH
+        if(ogameID == 121):
+            return constants.ATTR_NAME_OF_ION_Tech
+        if(ogameID == 114):
+            return constants.ATTR_NAME_OF_HYPER_SPACE_TECH
+        if(ogameID == 122):
+            return constants.ATTR_NAME_OF_PLASMA_TECH
+        if(ogameID == 115):
+            return constants.ATTR_NAME_OF_COMBUSTION_DRIVE
+        if(ogameID == 117):
+            return constants.ATTR_NAME_OF_IMPULSE_DRIVE
+        if(ogameID == 118):
+            return constants.ATTR_NAME_OF_HYPERSPACE_DRIVE
+        if(ogameID == 106):
+            return constants.ATTR_NAME_OF_SPY_TECH
+        if(ogameID == 108):
+            return constants.ATTR_NAME_OF_COMPUTER_TECH
+        if(ogameID == 124):
+            return constants.ATTR_NAME_OF_ASTROPHYSICS
+        if(ogameID == 123):
+            return constants.ATTR_NAME_OF_INT_GAL_RESEARCH
+        if(ogameID == 199):
+            return constants.ATTR_NAME_OF_GRAVITON_TECH
+        if(ogameID == 109):
+            return constants.ATTR_NAME_OF_WEAPON_TECH
+        if(ogameID == 110):
+            return constants.ATTR_NAME_OF_SHIELD_TECH
+        if(ogameID == 111):
+            return constants.ATTR_NAME_OF_ARMOUR_TECH
+        
+
+
+        return 'Not found ogameID'
+            
 
     def getPrerequisiteOf(ogameID):
         constructibleId = -1
