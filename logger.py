@@ -1,4 +1,5 @@
 from cgi import print_arguments
+import pprint
 
 
 class OBLC_Logger:
@@ -26,4 +27,4 @@ class OBLC_Logger:
         self.logImplementation(message)
 
     def logImplementation(self, message):
-        print(message)
+        pprint.pprint(message)
