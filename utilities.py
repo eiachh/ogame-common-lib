@@ -1,4 +1,4 @@
-from const import constants
+from common_lib.const import constants
 
 class utilities:
     def isPrerequisiteMet(ogameID, requestData):

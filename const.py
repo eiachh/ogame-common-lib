@@ -216,5 +216,3 @@ class constants:
         sum += 2 * priceJson['Crystal']
         sum += 3 * priceJson['Deuterium']
         return sum
-
-print(constants.getPrerequisiteOf(2))
