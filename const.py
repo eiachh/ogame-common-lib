@@ -129,6 +129,9 @@ class constants:
         }
     }
 
+    ogameIdOfAllResearch = [ENERGY_TECH, LASER_TECH, ION_Tech, HYPER_SPACE_TECH, PLASMA_TECH, COMBUSTION_DRIVE, IMPULSE_DRIVE, HYPERSPACE_DRIVE,
+                            SPY_TECH, COMPUTER_TECH, ASTROPHYSICS, INT_GAL_RESEARCH, GRAVITON_TECH, WEAPON_TECH, SHIELD_TECH, ARMOUR_TECH]
+
     def convertOgameIDToAttrName(ogameID):
         if(ogameID == 1):
             return constants.ATTR_NAME_OF_METAL_MINE
@@ -204,15 +207,7 @@ class constants:
         researchId = -1
         researchLevel = -1
 
-
         return {'constructible' : 
                     {'id' : constructibleId, 'level': constructibleLevel}, 
                 'research' : 
                     {'id' : researchId, 'level': researchLevel}}
-
-    def getResourceSumInUnitPrice(priceJson):
-        sum = 0
-        sum += 1 * priceJson['Metal']
-        sum += 2 * priceJson['Crystal']
-        sum += 3 * priceJson['Deuterium']
-        return sum

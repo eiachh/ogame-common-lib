@@ -20,3 +20,10 @@ class utilities:
                 if(requiredResearchID != -1 and currentResearchLevel < requiredResearchLevel):
                     return False
         return True
+
+    def getResourceSumInUnitPrice(priceJson, metalUnitPrice = 1, crystalUnitPrice = 2, deuUnitPrice = 3):
+        sum = 0
+        sum += metalUnitPrice * priceJson['Metal']
+        sum += crystalUnitPrice * priceJson['Crystal']
+        sum += deuUnitPrice * priceJson['Deuterium']
+        return sum
