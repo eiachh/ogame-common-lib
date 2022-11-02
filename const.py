@@ -126,7 +126,91 @@ class constants:
             [{'buildingID': SHIPYARD, 'buildingLevel': 1}],
         'researchable' : 
             [{'researchID' : COMBUSTION_DRIVE, 'researchLevel' : 1}]
-        }
+        },
+        LASER_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 1}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 2}]
+        },
+        ION_Tech : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 4}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 4}, {'researchID' : LASER_TECH, 'researchLevel' : 5}]
+        },
+        HYPER_SPACE_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 7}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 5}, {'researchID' : SHIELD_TECH, 'researchLevel' : 5}]
+        },
+        PLASMA_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 4}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 8}, {'researchID' : LASER_TECH, 'researchLevel' : 10}, {'researchID' : ION_Tech, 'researchLevel' : 5}]
+        },
+        IMPULSE_DRIVE : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 2}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 1}]
+        },
+        HYPERSPACE_DRIVE : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 7}],
+        'researchable' : 
+            [{'researchID' : HYPER_SPACE_TECH, 'researchLevel' : 3}]
+        },
+        SPY_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 3}],
+        'researchable' : 
+            [{'researchID' : -1, 'researchLevel' : -1}]
+        },
+        COMPUTER_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 1}],
+        'researchable' : 
+            [{'researchID' : -1, 'researchLevel' : -1}]
+        },
+        ASTROPHYSICS : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 3}],
+        'researchable' : 
+            [{'researchID' : SPY_TECH, 'researchLevel' : 4}, {'researchID' : IMPULSE_DRIVE, 'researchLevel' : 3}]
+        },
+        INT_GAL_RESEARCH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 10}],
+        'researchable' : 
+            [{'researchID' : COMPUTER_TECH, 'researchLevel' : 8}, {'researchID' : HYPER_SPACE_TECH, 'researchLevel' : 8}]
+        },
+        GRAVITON_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 12}],
+        'researchable' : 
+            [{'researchID' : -1, 'researchLevel' : -1}]
+        },
+        WEAPON_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 4}],
+        'researchable' : 
+            [{'researchID' : -1, 'researchLevel' : -1}]
+        },
+        SHIELD_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 6}],
+        'researchable' : 
+            [{'researchID' : ENERGY_TECH, 'researchLevel' : 3}]
+        },
+        ARMOUR_TECH : 
+        {'constructable' : 
+            [{'buildingID': RESEARCH_LAB, 'buildingLevel': 2}],
+        'researchable' : 
+            [{'researchID' : -1, 'researchLevel' : -1}]
+        },
     }
 
     ogameIdOfAllResearch = [ENERGY_TECH, LASER_TECH, ION_Tech, HYPER_SPACE_TECH, PLASMA_TECH, COMBUSTION_DRIVE, IMPULSE_DRIVE, HYPERSPACE_DRIVE,
