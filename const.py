@@ -286,12 +286,12 @@ class constants:
             
 
     def getPrerequisiteOf(ogameID):
-        constructibleId = -1
-        constructibleLevel = -1
+        constructableId = -1
+        constructableLevel = -1
         researchId = -1
         researchLevel = -1
 
-        return {'constructible' : 
-                    {'id' : constructibleId, 'level': constructibleLevel}, 
+        return {'constructable' : 
+                    {'id' : constructableId, 'level': constructableLevel}, 
                 'research' : 
                     {'id' : researchId, 'level': researchLevel}}
