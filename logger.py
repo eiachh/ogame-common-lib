@@ -1,11 +1,12 @@
 from cgi import print_arguments
-import pprint
+import requests
 
 
 class OBLC_Logger:
     logLevel = 'Info'
 
-    def __init__(self, loglevel):
+    def __init__(self, loglevel, componentName):
+        self.componentName = componentName
         if(loglevel == 'Info' or loglevel == 'Debug' or loglevel == 'Init'):
             self.logLevel = loglevel
         else:
@@ -18,13 +19,36 @@ class OBLC_Logger:
     def getLogLevel(self):
         return self.logLevel
 
-    def log(self, message, loglevel):
-        if(loglevel == 'Init'):
-            self.logImplementation(message)
-            return
+    def shouldBeLogged(self, loglevel):
         if(loglevel == 'Debug' and self.logLevel == 'Info'):
-            return
-        self.logImplementation(message)
+            return False
+        return True
 
-    def logImplementation(self, message):
-        pprint.pprint(message)
+    def logMinorInfo(self, message):
+        if(self.shouldBeLogged('Minor')):
+            self.logConsoleImplementation(message, 'Minor')
+
+    def logMainInfo(self, message):
+        if(self.shouldBeLogged('Main')):
+            self.logConsoleImplementation(message, 'Main')
+            self.logDiscordImplementation(message, 'Main')
+        
+    def logWarn(self, message):
+        if(self.shouldBeLogged('Warn')):
+            self.logConsoleImplementation(message, 'Warn')
+            self.logDiscordImplementation(message, 'Warn')
+
+    def logError(self, message):
+        if(self.shouldBeLogged('Error')):
+            self.logConsoleImplementation(message, 'Error')
+            self.logDiscordImplementation(message, 'Error')
+
+    def getLogHeaders(self, messageLogLevel):
+        return f'[{self.componentName}][{messageLogLevel}]: '
+
+    def logConsoleImplementation(self, message, loglevel):
+        print.pprint(f'{self.getLogHeaders(loglevel)} {message}')
+
+    def logDiscordImplementation(self, message, loglevel):
+        actualMessageToSend = f'{self.getLogHeaders(loglevel)} {message}'
+        requests.post("http://modularis.default.svc.cluster.local:5000/RestModuleCall/TargetedCall", data=actualMessageToSend)
