@@ -1,9 +1,6 @@
 from cgi import print_arguments
 import requests
 
-
-
-
 class OBLC_Logger:
     logLevel = 'Info'
 
@@ -55,7 +52,3 @@ class OBLC_Logger:
         actualMessageToSend = f'{self.getLogHeaders(loglevel)} {message}'
         headers = {'content-type': 'application/x-www-form-urlencoded'}
         requests.post("http://modularis.default.svc.cluster.local:5000/RestModuleCall/TargetedCall", data=actualMessageToSend, headers=headers)
-
-logger = OBLC_Logger("Info", "tester")
-
-logger.logMainInfo("TEST")
