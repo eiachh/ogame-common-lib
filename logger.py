@@ -47,7 +47,7 @@ class OBLC_Logger:
         return f'[{self.componentName}][{messageLogLevel}]: '
 
     def logConsoleImplementation(self, message, loglevel):
-        print.pprint(f'{self.getLogHeaders(loglevel)} {message}')
+        print(f'{self.getLogHeaders(loglevel)} {message}')
 
     def logDiscordImplementation(self, message, loglevel):
         actualMessageToSend = f'{self.getLogHeaders(loglevel)} {message}'
