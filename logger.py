@@ -1,4 +1,5 @@
 from cgi import print_arguments
+import platform
 import requests
 
 class OBLC_Logger:
@@ -51,4 +52,7 @@ class OBLC_Logger:
     def logDiscordImplementation(self, message, loglevel):
         actualMessageToSend = f'{self.getLogHeaders(loglevel)} {message}'
         headers = {'content-type': 'application/x-www-form-urlencoded'}
-        requests.post("http://modularis.default.svc.cluster.local:5000/RestModuleCall/TargetedCall", data=actualMessageToSend, headers=headers)
+        currPlatform = platform.platform()
+        if( not ("Windows" in currPlatform)):
+            requests.post("http://modularis.default.svc.cluster.local:5000/RestModuleCall/TargetedCall", data=actualMessageToSend, headers=headers)
+        
