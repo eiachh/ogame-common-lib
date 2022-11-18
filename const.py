@@ -1,3 +1,10 @@
+class Priority:
+    NORMAL = 'NORMAL_PRIORITY'  #Lowest priority, scheduler can reschedule                                  | Priority queue item
+    IMPORTANT = 'IMPORTANT_PRIORITY' #One over NORMAL priority, scheduler can reschedule                    | Priority queue item
+    TOP = 'TOP_PRIORITY' #Over NORMAL and IMPORTANT priority, scheduler can reschedule                      | Priority queue item
+    RESERVE = 'RESERVE_PRIORITY' #Over NORMAL and IMPORTANT and TOP priority, scheduler CAN NOT RESCHEDULE  | SCHEDULE queue item
+    EMERGENCY = 'EMERGENCY_PRIORITY' # Ignores all queues and all limitations, activates as soon as it is possible | QUEUE ignores
+
 class constants:
     #FOR BUILDING MANAGER    
     METAL_MINE = 1
