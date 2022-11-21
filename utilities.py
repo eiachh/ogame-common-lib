@@ -27,3 +27,10 @@ class utilities:
         sum += crystalUnitPrice * priceJson['Crystal']
         sum += deuUnitPrice * priceJson['Deuterium']
         return sum
+
+    def getEnergyConsumption(levelOfBuilding, attrNameOfBuilding):
+        if(attrNameOfBuilding == constants.ATTR_NAME_OF_METAL_MINE or attrNameOfBuilding == constants.ATTR_NAME_OF_CRYSTAL_MINE):
+            return round(10*levelOfBuilding*1.1**levelOfBuilding) - round(10*(levelOfBuilding-1)*1.1**(levelOfBuilding-1))
+        elif(attrNameOfBuilding == constants.ATTR_NAME_OF_DEU_MINE):
+            return round(20*levelOfBuilding*1.1**levelOfBuilding) - round(20*(levelOfBuilding-1)*1.1**(levelOfBuilding-1))
+        return -1
